@@ -53,7 +53,7 @@
                 extraSpecialArgs = { inherit system inputs; };
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.freja = import ./modules/home/${machine}/home.nix;
+                users.zoe = import ./modules/home/${machine}/home.nix;
               };
             }
           ];

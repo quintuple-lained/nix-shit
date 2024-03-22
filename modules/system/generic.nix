@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  blocklist = builtins.fetchurl
+   blocklist = builtins.fetchurl
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts";
 in {
   boot = {
@@ -16,10 +16,10 @@ in {
 
   time.timeZone = "Europe/Berlin";
 
-  networking.extraHosts = ''
+#   networking.extraHosts = ''
 
-    ${lib.readFile blocklist}
-  '';
+#    ${lib.readFile blocklist}
+# '';
 
   sound.enable = false;
   security.rtkit.enable = true;
@@ -73,6 +73,13 @@ in {
     initialHashedPassword =
       "$y$j9T$t3NrDHuB4i3UTu3TlDUWj/$utvDj26jLNNhQK4QXJjwkEjtVAf10EuvDtJYDJrz5WD";
   };
+	users.users.zoe = {
+		shell = pkgs.zsh;
+		isNormalUser = true;
+		autoSubUidGidRange = true;
+		home = "/home/zoe";
+    		extraGroups = [ "wheel" "networkmanager" "video" "audio" ];
+	};
 
   programs.zsh.enable = true;
 
