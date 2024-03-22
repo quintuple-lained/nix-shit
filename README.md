@@ -1,6 +1,8 @@
 # dotfiles
 
-my current dotfiles, managed using nix.
+my current nix flake and some dotfiles, managed using nix.
+
+this is a fork of [Freja's stuff](https://git.sr.ht/~jat/dotfiles)
 
 ## license 
 
