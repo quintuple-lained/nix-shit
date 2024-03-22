@@ -18,7 +18,7 @@
 
   };
 
-  outputs = { self, unstable, home-manager, flake-utils, emacs-overlay }@inputs:
+  outputs = { self, unstable, hyprland, home-manager, flake-utils, emacs-overlay }@inputs:
     let
       system = flake-utils.lib.system.x86_64-linux;
       machines = [ "hyprdesktop" ];

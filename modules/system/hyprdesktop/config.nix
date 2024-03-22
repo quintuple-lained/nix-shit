@@ -48,8 +48,9 @@
     enable = true;
 
     videoDrivers = [ "nvidia" ];
-
-    wayland.enable = true;
+	displayManager.sddm = {
+	enable = true;
+	wayland.enable = true;
     };
 
     xkb.layout = "us";
