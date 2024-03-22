@@ -51,11 +51,12 @@ in {
       #cascadia-code
       direnv
       fd
+	fish
       git
       #irony-server  # can't get emacs to recognise that
       #kicad-small
       kicad
-      #kitty
+      alacritty
       #openscad
       patchelf
       ripgrep
@@ -72,7 +73,6 @@ in {
       bottom
       comma
       easyeffects
-      hyfetch
       #linuxPackages_zen.cpupower
       hyfetch
       nix-index

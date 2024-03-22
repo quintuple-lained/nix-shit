@@ -91,6 +91,6 @@ in {
     curl
     wget
     firefox
-    neovim
+    vim
   ];
 }
