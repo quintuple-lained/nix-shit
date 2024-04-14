@@ -22,8 +22,10 @@ in {
     # hyprbar
     mako
     slurp
+	waybar
     wdisplays
     wl-clipboard
     xdg-utils
+	rofi-wayland
   ];
 }
