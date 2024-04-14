@@ -27,5 +27,6 @@ in {
     wl-clipboard
     xdg-utils
 	rofi-wayland
+	alacritty
   ];
 }
