@@ -13,7 +13,7 @@ in {
   imports = [ inputs.hyprland.homeManagerModules.default ];
   wayland.windowManager.hyprland = {
     enable = true;
-    # extraConfig = builtins.readFile ./hyprland.conf;
+    extraConfig = builtins.readFile ./hyprland.conf;
   };
 
   home.packages = with pkgs; [
