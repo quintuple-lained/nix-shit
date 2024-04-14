@@ -63,16 +63,6 @@ in {
     };
   };
 
-  users.users.freja = {
-    shell = pkgs.zsh;
-    isNormalUser = true;
-    autoSubUidGidRange = true;
-    home = "/home/freja";
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" ];
-    # i tend to forget to add a passward when setting up
-    initialHashedPassword =
-      "$y$j9T$t3NrDHuB4i3UTu3TlDUWj/$utvDj26jLNNhQK4QXJjwkEjtVAf10EuvDtJYDJrz5WD";
-  };
 	users.users.zoe = {
 		shell = pkgs.zsh;
 		isNormalUser = true;

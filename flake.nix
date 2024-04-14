@@ -21,14 +21,14 @@
   outputs = { self, unstable, hyprland, home-manager, flake-utils, emacs-overlay }@inputs:
     let
       system = flake-utils.lib.system.x86_64-linux;
-      machines = [ "hyprdesktop" ];
+      machines = [ "hyprdesktop" "hyprpad" ];
       pkgs = import unstable {
         inherit system overlays;
         config.allowUnfree = true;
       };
       overlays = [
-        emacs-overlay.overlay
-        # hyprland.overlays.default
+        # emacs-overlay.overlay
+        hyprland.overlays.default
       ];
     in with unstable.lib; {
       nixosConfigurations = genAttrs machines (machine:
