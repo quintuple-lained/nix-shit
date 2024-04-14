@@ -21,7 +21,7 @@
   outputs = { self, unstable, hyprland, home-manager, flake-utils, emacs-overlay }@inputs:
     let
       system = flake-utils.lib.system.x86_64-linux;
-      machines = [ "hyprdesktop" "hyprpad" ];
+      machines = [ "hyprpad" ];
       pkgs = import unstable {
         inherit system overlays;
         config.allowUnfree = true;
